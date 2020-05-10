@@ -13,11 +13,11 @@ namespace LibraryManagementSystem
         public static string sqlQuery;
         static void Main(string[] args)
         {
-            Console.Write("===How many operation you creat please enter this number===== :");
+            Console.Write("=== How many operation you creat please enter this number ===== :");
             int userInput = Int32.Parse(Console.ReadLine());
             for (int i = 0; i < userInput; i++)
             {
-                Console.Write("===Please write your operation==== : StudentSave, studentlist, BookSave, BookList, BookIssuSave");
+                Console.Write("===Please write your operation Name ==== : --- StudentSave, StudentList, BookSave, BookList, BookIssuSave --- :");
                 string userString = Console.ReadLine();
                 if (userString == "StudentSave")
                 {
@@ -32,7 +32,7 @@ namespace LibraryManagementSystem
                     student.StudentDepartment = Console.ReadLine();
                     SaveStudent(student);
                 }
-                else if (userString == "studentlist")
+                else if (userString == "StudentList")
                 {
                     List<Student> myStudentList = new List<Student>();
                     myStudentList = StudentList();
